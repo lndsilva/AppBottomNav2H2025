@@ -6,4 +6,8 @@
         android:icon="@drawable/baseline_photo_camera"
         android:title="Camera"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/mNovoGrupo"
+        android:title="Novo grupo"
+        app:showAsAction="never" />
 </menu>
