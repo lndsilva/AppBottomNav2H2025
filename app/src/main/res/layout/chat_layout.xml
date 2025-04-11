@@ -7,25 +7,53 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/idChatMatToolBar"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/idAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/idChatMatToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:menu="@menu/menu_top_whats"
+                app:title="WhatsApp"
+                app:titleTextColor="#25D366" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/menu_top_whats"
-            app:title="WhatsApp" />
+            android:layout_below="@+id/idAppBar"
+            android:layout_margin="10dp"
+            app:boxCornerRadiusBottomEnd="25sp"
+            app:boxCornerRadiusBottomStart="25sp"
+            app:boxCornerRadiusTopEnd="25sp"
+            app:boxCornerRadiusTopStart="25sp">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_search"
+                android:drawablePadding="10sp"
+                android:hint="@string/pergunte_meta_ai_ou_pesquise"
+                android:padding="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/idChatBottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/idChatBottomNav"
         android:layout_gravity="bottom"
-        app:menu="@menu/menu_chat_bottom_nav"
-        />
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_chat_bottom_nav" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
