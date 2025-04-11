@@ -20,4 +20,12 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idChatBottomNav"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_chat_bottom_nav"
+        />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
