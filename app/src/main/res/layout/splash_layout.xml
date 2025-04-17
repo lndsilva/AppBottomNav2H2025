@@ -11,17 +11,23 @@
         android:id="@+id/idLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:scaleType="centerCrop"
         android:layout_gravity="center_vertical|center_horizontal"
+        android:scaleType="centerCrop"
         android:src="@drawable/whatsapp_logo" />
 
-    <ImageView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/meta_icons"
-        android:scaleType="centerCrop"
+        android:layout_marginBottom="60sp"
+        android:text="From" />
+
+    <ImageView
         android:id="@+id/logoMeta"
-        />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:scaleType="centerCrop"
+        android:src="@drawable/meta_icons" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
