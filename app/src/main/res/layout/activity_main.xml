@@ -14,4 +14,6 @@
         app:menu="@menu/menu_bottom_nav"
         android:id="@+id/idBottomNav" />
 
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

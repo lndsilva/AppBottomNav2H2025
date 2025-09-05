@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,6 +8,7 @@
     tools:context=".ChatActivity">
 
     <RelativeLayout
+        android:id="@+id/idHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -37,6 +38,7 @@
             app:boxCornerRadiusTopStart="25sp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idEdtPesquisar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/baseline_search"
@@ -49,12 +51,20 @@
 
     </RelativeLayout>
 
+    <FrameLayout
+        android:layout_below="@+id/idHeader"
+        android:layout_above="@+id/idChatBottomNav"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/idChatBottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_chat_bottom_nav" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
